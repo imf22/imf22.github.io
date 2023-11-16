@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 /* Basic CSS for navbar */
 .navbar {
   background-color: #333;
@@ -11,7 +16,7 @@
 .navbar a {
   color: white;
   text-decoration: none;
-  padding: 8px 10px; /* Reduced top and bottom padding */
+  padding: 8px 10px;       /* Reduced top and bottom padding */
 }
 
 .navbar a:hover {
@@ -20,13 +25,13 @@
 }
 
 .navbar img {
-  max-height: 35px; /* Shrink the logo to 30px */
-  padding-right: 5px; /* Add some space between logo and text */
+  max-height: 35px;       /* Shrink the logo to 30px */
+  padding-right: 5px;     /* Add some space between logo and text */
 }
 
 .navbar-brand {
   display: flex;
-  align-items: center; /* Center align items */
+  align-items: center;    /* Center align items */
 }
 
 /* Style for stacked website name */
@@ -38,19 +43,18 @@
 @media screen and (max-width: 768px) {
   .navbar {
     justify-content: space-between;
-    /* flex-direction: column;
-    align-items: flex-start; */
+    align-items: center;
     padding: 10px;
   }
   
-  /* .navbar nav {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  } */
+  .navbar nav {
+    display: flex;
+    align-content: center;
+  }
 
   .navbar nav a {
     padding: 8px 10px; /* Adjust padding for smaller screens */
+    margin-bottom:  10px ;
   }
   
   .navbar-brand {
