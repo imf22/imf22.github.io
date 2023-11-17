@@ -1,16 +1,30 @@
+/*
+To Specifiy Font Families
+font-family: 'Josefin Sans', sans-serif; 
+font-family: 'Montserrat', sans-serif;  Regular 400, Semi-bold 600
+font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
+
 *{
   margin: 0;
   padding: 0;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
-/* Basic CSS for navbar */
+/* Navbar */
 .navbar {
-  background-color: #333;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+
+  background-color: #323033cc;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 0px;
+
 }
 
 .navbar a {
@@ -19,9 +33,25 @@
   padding: 8px 10px;       /* Reduced top and bottom padding */
 }
 
-.navbar a:hover {
-  background-color: #ddd;
+.navbar a:active {
+  background-color: #F3F8F3;
   color: black;
+  /* transition: all .25s ease; */
+  border-radius: 5px;
+}
+
+.navbar nav a{
+  border-bottom: 0px solid transparent;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: large;
+}
+
+.navbar nav a:hover{
+  padding-bottom: 0px;
+  border-bottom: 3px solid #F3F8F3;
+  transition:  all .25s ease;
 }
 
 .navbar img {
@@ -37,14 +67,16 @@
 /* Style for stacked website name */
 .website-name span {
   display: block;
+
+  font-size: 300;
 }
 
-/* Media query for responsiveness */
+/* Media query: Navbar  */
 @media screen and (max-width: 768px) {
   .navbar {
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 10px 0px;
   }
   
   .navbar nav {
@@ -54,14 +86,41 @@
 
   .navbar nav a {
     padding: 8px 10px; /* Adjust padding for smaller screens */
-    margin-bottom:  10px ;
+    margin-bottom:  0px ;
   }
   
   .navbar-brand {
-    margin-bottom: 10px; /* Add space below the logo on smaller screens */
+    margin-bottom: 0px; /* Add space below the logo on smaller screens */
   }
   
   .navbar.navbar-responsive nav {
     display: block;
   }
 }
+
+/* Body and Content */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100vw;
+  height: 100vw;
+  overflow: hidden;
+  position: relative;
+
+
+}
+
+.image-container img {
+  position: relative;
+  right: 10px;
+  bottom: 10px;
+
+  height: 180vw;
+  object-fit: cover;
+  -webkit-clip-path: square(40% at center);
+  clip-path: square(40% at center);
+}
+
+
+
