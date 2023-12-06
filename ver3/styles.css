@@ -7,9 +7,44 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 *{
   margin: 0;
   padding: 0;
-
+  
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  
+  
+}
+
+body{
+  background-color: #323033;
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  color: #F3F8F3;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: xx-large;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+
+}
+
+h2{
+  /* color: #F3F8F3; */
+  color: #76dce8;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: large;
+  text-transform: uppercase;
+}
+
+p{
+  color: #B3B0AC;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: medium;
 }
 
 /* Navbar */
@@ -17,7 +52,7 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
   width: 100vw;
   position: fixed;
   z-index: 1000;
-
+  
   background-color: #323033cc;
   overflow: hidden;
   display: flex;
@@ -41,11 +76,12 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 }
 
 .navbar nav a{
-  border-bottom: 0px solid transparent;
-
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
   font-size: large;
+  margin-right: 20px;
+  text-transform: uppercase;
+  border-bottom: 0px solid transparent;
 }
 
 .navbar nav a:hover{
@@ -67,8 +103,9 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 /* Style for stacked website name */
 .website-name span {
   display: block;
-
   font-size: 300;
+  text-transform: uppercase;
+
 }
 
 /* Media query: Navbar  */
@@ -87,6 +124,7 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
   .navbar nav a {
     padding: 8px 10px; /* Adjust padding for smaller screens */
     margin-bottom:  0px ;
+    margin-right: 10px;
   }
   
   .navbar-brand {
@@ -99,6 +137,14 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 }
 
 /* Body and Content */
+.bio-text{
+  margin: 20px;
+}
+
+.bio-text *{
+  margin: 5px;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -108,8 +154,8 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
   overflow: hidden;
   position: relative;
 
-
 }
+
 
 .image-container img {
   position: relative;
@@ -122,5 +168,27 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
   clip-path: square(40% at center);
 }
 
+.interactions-buttons {
+  /* width: 100%; */
+  width: auto;
+  display: flex;
+  justify-content: center;
+  
+}
 
+.interactions-buttons button{
+  display: block;
+  margin: 5px;
+  padding: 7px;
+}
 
+.interactions-buttons button p{
+  display: flex;
+  width: 50%;
+  justify-content: left;
+  overflow: none;
+}
+
+/* .socials-icons{
+
+} */
