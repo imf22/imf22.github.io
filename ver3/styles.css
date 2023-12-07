@@ -162,7 +162,7 @@ p{
   right: 10px;
   bottom: 10px;
 
-  height: 180vw;
+  height: 190vw;
   object-fit: cover;
   -webkit-clip-path: square(40% at center);
   clip-path: square(40% at center);
@@ -177,16 +177,15 @@ p{
 }
 
 .interactions-buttons button{
-  display: block;
+  /* display: block; */
   margin: 5px;
   padding: 7px;
 }
 
 .interactions-buttons button p{
   display: flex;
-  width: 50%;
-  justify-content: left;
-  overflow: none;
+  width: min-content;;
+  text-align: left;
 }
 
 /* .socials-icons{
