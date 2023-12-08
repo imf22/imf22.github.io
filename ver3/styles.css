@@ -149,19 +149,6 @@ p{
   margin: 5px;
 }
 
-@media screen and (min-width: 768px) {
-  .bio-card{
-    display: flex;
-    
-  }
-
-  .bio-text{
-    margin-top: 100px;
-  }
-}
-
-
-
 .image-container {
   display: flex;
   justify-content: center;
@@ -216,6 +203,47 @@ p{
   -webkit-clip-path: square(40% at center);
   clip-path: square(40% at center);
 }
+
+
+@media screen and (min-width: 768px) {
+  .bio-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+   
+    width: 90vw;
+  }
+
+  /* .bio-text{
+    margin-top: 100px;
+  } */
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60vw;
+    height: 36vw;
+    overflow: clip;
+    position: relative;
+  }
+
+  .image-container img {
+    /* position: relative; */
+    /* right: 10px; */
+    bottom: 0%;
+    height: 100%;
+    object-fit: cover;
+    /* -webkit-clip-path: circle(30% at center); */
+    clip-path: circle(40% at 52% 42%);
+  }
+} 
+
+
+
+
+
 
 .interactions-buttons {
   width: auto;
