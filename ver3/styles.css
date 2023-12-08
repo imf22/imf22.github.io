@@ -153,9 +153,41 @@ p{
   height: 85vw;
   overflow: hidden;
   position: relative;
-
 }
 
+.image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 5px; /* Adjusts the height of the gradient border */
+  background: linear-gradient(to right,#aa9ff1, #76dce8, #aa9ff1,#aa9ff1, #76dce8); 
+  animation: gradientAnimation 30s ease infinite; /* Use the defined animation */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    /* width: 100%; */
+     /* Start position */
+    left: -50%;
+  }
+  25% {
+    /* width: 200%; */
+     /* Gradually increase width to 100% */
+    left: -100%;
+  }
+  50%{
+    left: -50%;
+  }
+  75%{
+    left: 0%;
+  }
+  100%{
+    left: -50%;
+  }
+
+}
 
 .image-container img {
   position: relative;
@@ -179,6 +211,7 @@ p{
 .interactions-buttons button{
   display: flex;
   margin: 10px;
+  /* padding: 7px 15px; */
   padding: 7px;
   align-items: center;
   font-size: x-large; 
@@ -187,6 +220,7 @@ p{
   background-image: linear-gradient(to bottom right, #76dce8,  #aa9ff1);
   border: 4px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
+  /* border-radius: 30px; */
   transition: all 0.3s ease;
 
 }
@@ -197,12 +231,15 @@ p{
   transition: all 0.5s ease;
 }
 
-
+/* Note ask if looks better with
+  round buttons, center text
+  square button, left text */
 
 .interactions-buttons button p{
   display: flex;
   width: min-content;;
   text-align: left;
+  /* text-align: center; */
   line-height: 20px;
 
   color: white;
