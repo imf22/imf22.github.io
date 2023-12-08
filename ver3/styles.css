@@ -153,8 +153,8 @@ p{
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 100vw;
-  height: 85vw;
+  /* width: 100vw; */
+  /* height: 85vw; */
   overflow: hidden;
   position: relative;
 }
@@ -194,14 +194,8 @@ p{
 }
 
 .image-container img {
-  position: relative;
-  right: 10px;
-  bottom: 100px;
-
-  height: 190vw;
-  object-fit: cover;
-  -webkit-clip-path: square(40% at center);
-  clip-path: square(40% at center);
+  width: 100vw;
+  /* object-fit: contain; */
 }
 
 
@@ -213,6 +207,7 @@ p{
     margin-top: 100px;
    
     width: 90vw;
+    height: 35vw;
   }
 
   /* .bio-text{
@@ -221,22 +216,21 @@ p{
 
   .image-container {
     display: flex;
+    height: 100%;
     justify-content: center;
     align-content: center;
-    width: 60vw;
-    height: 36vw;
-    overflow: clip;
+    overflow: hidden;
     position: relative;
+    
   }
 
   .image-container img {
     /* position: relative; */
     /* right: 10px; */
-    bottom: 0%;
-    height: 100%;
-    object-fit: cover;
+    height: 50%;
+    object-fit: scale-down;
     /* -webkit-clip-path: circle(30% at center); */
-    clip-path: circle(40% at 52% 42%);
+    clip-path: circle(40% at center);
   }
 } 
 
