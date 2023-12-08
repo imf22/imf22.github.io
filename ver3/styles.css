@@ -225,6 +225,28 @@ p{
   padding-left: 5px;
 }
 
-/* .socials-icons{
+.socials-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;  
+  font-size: 5vh;
+}
 
-} */
+.ri-github-fill{
+  /* color: #aa9ff1; */
+  color: white;
+  margin: 5px;
+}
+
+.ri-linkedin-box-fill{
+  /* color: #aa9ff1; */
+  color: white;
+  margin: 5px;
+}
+
+.ri-more-fill{
+  /* color: #aa9ff1; */
+  color: white;
+  margin: 0px;
+}
