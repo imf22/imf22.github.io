@@ -58,7 +58,7 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0px;
+  padding: 10px 0px;
 
 }
 
@@ -225,19 +225,11 @@ p{
   }
 
   .image-container img {
-    /* position: relative; */
-    /* right: 10px; */
-    height: 50%;
+    height: 100%;
     object-fit: scale-down;
-    /* -webkit-clip-path: circle(30% at center); */
     clip-path: circle(40% at center);
   }
 } 
-
-
-
-
-
 
 .interactions-buttons {
   width: auto;
