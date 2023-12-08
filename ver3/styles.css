@@ -137,6 +137,10 @@ p{
 }
 
 /* Body and Content */
+/* .bio-card{
+  display: none;
+} */
+
 .bio-text{
   margin: 20px;
 }
@@ -144,6 +148,19 @@ p{
 .bio-text *{
   margin: 5px;
 }
+
+@media screen and (min-width: 768px) {
+  .bio-card{
+    display: flex;
+    
+  }
+
+  .bio-text{
+    margin-top: 100px;
+  }
+}
+
+
 
 .image-container {
   display: flex;
