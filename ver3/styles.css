@@ -330,3 +330,82 @@ p{
   color: white;
   margin: 0px;
 }
+
+body{
+  display: block;
+}
+
+.image-slider{
+  min-height: 30em;
+  width: 100vmin;
+  height: fit-content;
+  /* height: 100vmin; */
+  position: relative;
+  
+  background-image: url(images/img1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+  transition: 0.3s;
+
+}
+
+.image-slider * {
+  box-sizing: border-box;
+}
+
+.caption{
+  background: linear-gradient(rgba(0,0,0,0), #000);
+  position:absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  padding: 4em 1em 2em 1em;
+  text-align: center;
+}
+
+.caption h1{
+  margin: 0;
+  color: #fff;
+}
+
+p{
+  color: #8a8a8a;
+}
+
+.arrow-left, .arrow-right{
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.arrow-left:hover, .arrow-right:hover{
+  background: #000;
+  color: #fff;
+}
+
+.arrow-left{
+  left: 1em;
+}
+
+.arrow-right{
+  right: 1em;
+}
+
+.image-fade{
+  animation: imgFade 0.5s ease-in-out;
+}
+
+@keyframes imgFade{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
