@@ -19,6 +19,11 @@
     <!-- RemixIcons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <!-- Carousel JS -->
+     <!-- <script defer src="carousel.js"></script> -->
+     <script defer src="slider.js"></script>
+
+
     <title>Irving Fenochio</title>
 </head>
 <body style="display: flex-column; ">
@@ -55,21 +60,17 @@
             
             <div class="interactions-buttons">
                 <button>
-                    <!-- style="font-variant: small-caps;" -->
                     <i class="ri-download-line"></i>
                     <p>Download Resume</p>
-                    <!-- replace <p> with icon -->
                 </button>
                 <button>
                     <i class="ri-mail-send-line"></i>
                     <p>Contact Me</p>
-                    <!-- replace <p> with icon -->
                 </button>
             </div>
     
             <div class="socials-icons">
                 <i class="ri-github-fill"></i>
-                <!-- <i class="ri-more-fill"></i> -->
                 <i class="ri-linkedin-box-fill"></i>
     
             </div>
@@ -77,13 +78,20 @@
     </div>
 
     <div>
-        <section class="image-slider">
-            <div class="arrow-left">
+        <section class="carousel">
+            <div class="prev">
                 <i class="ri-arrow-left-line"></i>      
             </div>
-            <div class="arrow-right">
+            <div class="next">
                 <i class="ri-arrow-right-line"></i>
             </div>
+
+            <div class="images">
+                <img src="images/img1.png" alt="Image 1">
+                <img src="images/im2.png" alt="Image 2">
+                <img src="images/img7.png" alt="Image 7">
+            </div>
+
             <div class="caption">
                 <h1>Project Name</h1>
                 <h2>Role / Postion</h2>
@@ -92,20 +100,5 @@
         </section>
     </div>
     
-    <!-- <section>
-        <div class="carousel">
-            <button class="carousel-button-prev">butt1</button>
-            <button class="carousel-button-next">butt2</button>
-
-            <ul>
-                <li class="slide" data-active><img src="" alt="IMG1">1</li>
-                <li class="slide"><img src="" alt="IMG2">2</li>
-                <li class="slide"><img src="" alt="IMG3">3</li>
-            </ul>
-        </div>
-    </section> -->
-
-    <!-- User light/Darkmode preferrence -->
-    <!-- <script src="favicon.js"></script> -->
 </body>
 </html>

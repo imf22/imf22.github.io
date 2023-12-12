@@ -22,9 +22,6 @@
       cursor: pointer;
       z-index: 1;
     }
-    /* .images{
-      display: flex;
-    } */
 
     .carousel .prev {
       left: 0;
@@ -33,6 +30,8 @@
       right: 0;
     }
   </style>
+
+  <script defer src="slider.js"></script>
 </head>
 <body>
 
@@ -59,85 +58,8 @@
 </div>
 
 <script>
-  document.querySelectorAll('.carousel').forEach(carousel => {
-    const images = carousel.querySelector('.images');
-    const prevButton = carousel.querySelector('.prev');
-    const nextButton = carousel.querySelector('.next');
-    
-    let imageIndex = 0;
-    const totalImages = images.children.length;
-    const shiftY = Math.floor(100 / totalImages);
-
-    const childElements = images.querySelectorAll('img');
-    // console.log(images.childNodes);
-    let childArray = [];
-
-    for (let i = 0; i < childElements.length; i++) {
-      console.log(childElements[i]);
-      const childElement = childElements[i];
-      // Hide the child element by setting display to 'none'
-      childElement.style.display = 'none';
-
-      // Push the child element into the array
-      childArray.push(childElement);
-    }
-
-
-
-
-    prevButton.addEventListener('click', () => {
-      childArray[imageIndex].style.display ='none';
-      imageIndex = (imageIndex - 1 + totalImages) % totalImages;
-      updateImage();
-    });
-
-    nextButton.addEventListener('click', () => {
-      childArray[imageIndex].style.display ='none';
-      imageIndex = (imageIndex + 1) % totalImages;
-      updateImage();
-    });
-
-    function updateImage() {
-      childArray[imageIndex].style.display ='flex';
-      
-      // images.style.transform = `translateY(${(imageIndex * shiftY) -shiftY}%)`;
-    }
-
-    updateImage();
-
-  });
+  
 </script>
-<!-- 
-<script>
-  document.querySelectorAll('.carousel').forEach(carousel => {
-    const images = carousel.querySelector('.images');
-    const prevButton = carousel.querySelector('.prev');
-    const nextButton = carousel.querySelector('.next');
-    
-    let imageIndex = 0;
-    const totalImages = images.children.length;
-    const shiftY = Math.floor(100 / totalImages);
-
-    prevButton.addEventListener('click', () => {
-      imageIndex = (imageIndex - 1 + totalImages) ;
-      updateImage();
-    });
-
-    nextButton.addEventListener('click', () => {
-      imageIndex = (imageIndex + 1) % totalImages;
-      updateImage();
-    });
-
-    function updateImage() {
-      
-      images.style.transform = `translateY(${(imageIndex * shiftY) -(2*shiftY)}%)`;
-    }
-
-    updateImage();
-    carousel.style.height = `${Math.floor((carousel.clientHeight-5) /totalImages)}px`;
-
-  });
-</script> -->
 
 </body>
 </html>

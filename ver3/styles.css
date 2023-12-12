@@ -49,6 +49,7 @@ p{
 
 /* Navbar */
 .navbar {
+  top: 0;
   width: 100vw;
   position: fixed;
   z-index: 1000;
@@ -153,8 +154,6 @@ p{
   display: flex;
   justify-content: center;
   align-content: center;
-  /* width: 100vw; */
-  /* height: 85vw; */
   overflow: hidden;
   position: relative;
 }
@@ -201,10 +200,11 @@ p{
 
 @media screen and (min-width: 768px) {
   .bio-card{
+    margin: 70px 5vw auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+/*     margin-top: 70px; */
    
     width: 90vw;
     height: 35vw;
@@ -232,9 +232,14 @@ p{
   }
   
   @media screen and (min-width: 1800px) {
+    .bio-card{
+      width: 60%;
+      margin: 70px 15% auto;
+
+    }
     .image-container {
       /* height: 100%; */
-      width: 35vw;
+      width: 100%;
       
     }
   }
@@ -335,14 +340,16 @@ body{
   display: block;
 }
 
-.image-slider{
+/* Image Carousels */
+
+.carousel{
   min-height: 30em;
   width: 100vmin;
   height: fit-content;
   /* height: 100vmin; */
   position: relative;
   
-  background-image: url(images/img1.png);
+  /* background-image: url(images/img1.png); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -350,9 +357,35 @@ body{
   transition: 0.3s;
 
 }
+.carousel .images{
+  padding-top: 25%;
+}
 
-.image-slider * {
+
+
+.carousel img {
+  width: 100%;
+  display: block;
+}
+/* .carousel .images img{
+  background-image: url(images/img1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+} */
+
+.carousel * {
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 769px) {
+  .carousel{
+    width: 100%;
+  }
+  
+  .prev, .next{
+    top: 60%;
+  }
 }
 
 .caption{
@@ -374,10 +407,10 @@ p{
   color: #8a8a8a;
 }
 
-.arrow-left, .arrow-right{
+.prev, .next{
   background: #fff;
   position: absolute;
-  top: 40%;
+  top: 50%;
   width: 3em;
   height: 3em;
   border-radius: 50%;
@@ -388,16 +421,18 @@ p{
   transition: 0.3s;
 }
 
-.arrow-left:hover, .arrow-right:hover{
+.prev:hover, .next:hover{
   background: #000;
   color: #fff;
 }
 
-.arrow-left{
+
+
+.prev{
   left: 1em;
 }
 
-.arrow-right{
+.next{
   right: 1em;
 }
 
