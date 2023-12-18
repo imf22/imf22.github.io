@@ -17,6 +17,11 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 body{
   background-color: #323033;
   display: flex;
+
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center; 
+
   justify-content: center;
 }
 
@@ -325,9 +330,9 @@ p{
   margin: 0px;
 }
 
-body{
+/* body{
   display: block;
-}
+} */
 
 /* @media screen and (min-width: 768px) {
   body {
@@ -347,9 +352,9 @@ body{
 /* Image Carousels */
 
 .carousel{
-  min-height: 30em;
+  min-height: 100vmin;
   width: 100vmin;
-  height: fit-content;
+  /*! height: fit-content; */
   position: relative;
   
   background-repeat: no-repeat;
@@ -358,10 +363,12 @@ body{
   
   transition: 0.3s;
 
+  margin: 25% 0 0 0;
 }
-.carousel .images{
-  padding-top: 25%;
-}
+
+/* .carousel .images{ */
+  /*! padding-top: 25%; */
+/* } */
 
 
 
@@ -384,16 +391,13 @@ body{
   .carousel{
     width: 80vmax;
   }
-  
-  .prev, .next{
-    top: 60%;
-  }
+
 }
 
 .caption{
   background: linear-gradient(rgba(0,0,0,0), #000);
-  position:absolute;
-  bottom: -14em;
+  position:relative;
+  /*! bottom: -14em; */
   left: 0;
   width: 100%;
   padding: 4em 1em 2em 1em;
@@ -421,7 +425,7 @@ body{
 .prev, .next{
   background: #fff;
   position: absolute;
-  top: 50%;
+  top: 25vmin;
   width: 3em;
   height: 3em;
   border-radius: 50%;
@@ -448,8 +452,10 @@ body{
   right: 1em;
 }
 
-.image-fade{
-  animation: imgFade 0.5s ease-in-out;
+@media screen and (min-aspect-ratio: 1/1) {
+  .prev, .next{    
+    top: 45vmin;
+  }
 }
 
 @keyframes imgFade{
