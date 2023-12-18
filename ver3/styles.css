@@ -401,11 +401,19 @@ body{
 }
 
 .caption h1{
-  margin: 0;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75em;
   color: #fff;
 }
 
+.caption h2{
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
 .caption p{
+  font-size: 1rem;
   color: #8a8a8a;
   margin-bottom: 1em;
 }
