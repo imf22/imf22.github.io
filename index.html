@@ -1,58 +1,171 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <!-- <script src="https://use.fontawesome.com/d1341f9b7a.js"></script> -->
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="icon" type="image/png" href="favicon.png">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" id="favicon" href="images/favicon_light.png">
 
-        <link rel="stylesheet" href="style.css">
-        <title>Irving Fenochio</title>
-    </head>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
-    <body class="bk-blur">
+    <!-- Google Fonts: Oswald & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat:wght@400;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- RemixIcons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
+    <!-- Carousel JS -->
+     <!-- <script defer src="carousel.js"></script> -->
+     <script defer src="js/slider.js"></script>
+
+
+    <title>Irving Fenochio</title>
+</head>
+<body>
+<!-- <body style="display: flex-column; "> -->
+
+    <!-- Navbar/Header -->
+    <header class="navbar">
+        <a class="navbar-brand" href="#home">
+            <img src="images/Logo_02_Dark.png" alt="Logo">
+            <div class="website-name">
+                <span>Irving</span>
+                <span>Fenochio</span>
+            </div>
+        </a>
         <nav>
-            <!-- <input type="checkbox" id="checkbox">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label> -->
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Project</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">About Me</a></li>
-
-            </ul>
+            <a href="#">About Me</a>
+            <a href="#">Projects</a>
         </nav>
+    </header>
 
-        <div class="box">
-            <img src="profileImg.png" alt="" class="box-img">
-            <h1>Irving Fenochio</h1>
-            <h5>Developer / Programmer</h5>
-            <p>
-                Welcome to my personal website! I am a skilled developer and programmer with a particular focus on Human-Computer Interaction (HCI) and Game Design and Development. I am constantly improvigng and honing my skills in designing and developing engaging user experiences that captivate and delight users.
-            </p>
-            <p>
-                My passion for learning and exploration drives me to constantly seek new challenges and push the boundaries of my skill set. Whether it's developing intuitive interfaces, creating immersive game environments, or designing responsive websites, I bring a unique blend of creativity and technical expertise to every project I work on.
-            </p>
-                
-            <p>
-                On this website, you will find examples of my work, as well as an overview of my skills and experience. I am always looking for new opportunities to collaborate on exciting projects, so feel free to reach out to me if you are interested in working together.
-                
-                Thank you for visiting, and I look forward to connecting with you soon!
-            </p>
+    <!-- Bio-card -->
+    <div class="bio-card">
+        <div class="image-container">
+            <img src="images/Moi.png" alt="Moi" >
         </div>
-
-        <h1>Projects</h1>
-
-        <div class="box">
-            <div>
-
+        
+        <div>
+            <div class="bio-text">
+                <h1>Irving Fenochio</h1>
+                <h2>Software Developer</h2>
+                <p>
+                    Welcome to my personal website!  I am a developer and programmer with a particular focus on Human-Computer Interaction (HCI) and Game Design and Development. 
+                </p>
+            </div>
+            
+            <div class="interactions-buttons">
+                <button>
+                    <i class="ri-download-line"></i>
+                    <p>Download Resume</p>
+                </button>
+                <button>
+                    <i class="ri-mail-send-line"></i>
+                    <p>Contact Me</p>
+                </button>
+            </div>
+    
+            <div class="socials-icons">
+                <i class="ri-github-fill"></i>
+                <i class="ri-linkedin-box-fill"></i>
+    
             </div>
         </div>
-    </body>
+    </div>
+
+    <div>
+        <!-- Sprouting Spirit -->
+        <section class="carousel">
+            <div class="prev">
+                <i class="ri-arrow-left-line"></i>      
+            </div>
+            <div class="next">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+
+            <div class="images">
+                <img src="images/img1.png" alt="Image 1">
+                <img src="images/im2.png" alt="Image 2">
+                <img src="images/img7.png" alt="Image 7">
+            </div>
+
+            <div class="caption">
+                <h1>Sprouting Spirit</h1>
+                <h2>UI/UX Dev & Level Designer</h2>
+                <div>
+                    <p>Sprouting Spirirt: Dream Duo is 3D puzzle platformer where you play as the main character, Maple, traversing her imaginary world with her imaginary friend Cornelius. Developed in the Unity game engine, we prided ourselves on creating our own tools to assist in the development process.</p>
+                    <p>My capstone project, I worked as UI Developer / Level Designer and collaborated on a team of 16 other iterdisciplinary students. I developed the in-game UI Popup System. It main features include, controll over font size/slying, text formatting, appearance customizability such as color or use of custom images. Additionally flexibility of the popup’s fade in-out animation and speed</p>
+                    <p>The total game experience consisted of 4 game levels, myself being responsible for overseeing the development of the 3rd level. This level being the point in which the puzzle difficulty beings to ramp up and serves to build up to the games final level.</p>
+
+                    <p>Check out the game's full page and our joint animation at <a href="https://sproutingspiritgame.com/">Sprouting Spirit Game</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conways: Game of Life -->
+        <section class="carousel">
+            <div class="prev">
+                <i class="ri-arrow-left-line"></i>      
+            </div>
+            <div class="next">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+
+            <div class="images">
+                <img src="images/conways1.png" alt="Image 1">
+                <img src="images/conways2.png" alt="Image 2">
+                <img src="images/conways3.png" alt="Image 7">
+            </div>
+
+            <div class="caption">
+                <h1>Conway's Game of Life</h1>
+                <h2>Software Developer Backend</h2>
+                <div>
+                    <p>This web-based version of Conway’s Game of Life features a 25x25 tile board, controls to run a simulation, take the next step, pause, reset and randomize the simulation.</p>
+
+                    <p>Starting out intially as a school project teach how to work with DOM elements, I want to expand it functionality to implement interactivity for each cell. In addition, to being able to chose an empty board to start with, users can now create their own patterns. </p>
+
+                    <p>Try it out <a href="conways.html">here!</a></p>
+
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="carousel">
+            <div class="prev">
+                <i class="ri-arrow-left-line"></i>      
+            </div>
+            <div class="next">
+                <i class="ri-arrow-right-line"></i>
+            </div>
+
+            <div class="images">
+                <img src="images/img1.png" alt="Image 1">
+                <img src="images/im2.png" alt="Image 2">
+                <img src="images/img7.png" alt="Image 7">
+            </div>
+
+            <div class="caption">
+                <h1>Sprouting Spirit</h1>
+                <h2>Role / Postion</h2>
+                <div>
+                    <p>Sprouting Spirirt: Dream Duo is 3D puzzle platformer where you play as the main character, Maple, traversing her imaginary world with her imaginary friend Cornelius. Developed in the Unity game engine, we prided ourselves on creating our own tools to assist in the development process.</p>
+                    <p>As my capstone project, I worked as UI Developer / Level Designer and collaborated on a team of 16 other Com. Sci and Game Dev students. I developed the in-game UI Popup System. It main features include, controll over font size and slying,</p>                    
+                </div>
+            </div>
+        </section>
+
+    
+
+        
+    </div>
+    
+</body>
 </html>

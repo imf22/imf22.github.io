@@ -209,7 +209,7 @@ function stepBoard (arr2d){
                     updatedBoard[i].push(false);
                 }
             }else{
-                if(liveNeighbors == 2 || liveNeighbors == 3){
+                if(liveNeighbors >= 2 && liveNeighbors <= 3){
                     // Push live cell
                     updatedBoard[i].push(true);
                 }else {
