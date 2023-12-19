@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Conway's Game of Life</title>
+
+        <style>
+            :root{
+                --cellSize: 25px;
+            }
+            
+            html{
+                text-align: center;
+                background-color: #f4c095;
+            }
+
+            
+
+
+            table {
+                margin: auto;
+                width: auto;
+                height: auto;
+                border: 3px ;
+                padding: 10px;
+                border-collapse: collapse;
+                outline: 2px solid #071e22;
+            }
+
+            h1, h2{
+                font-family:fantasy;
+                color: #071e22;
+            }
+
+            tr, td {
+                border: 1px solid gray;
+            }
+            p, a{
+                font-family: fantasy;
+                font-size: large;
+                margin-bottom: 2em;
+            }
+
+
+            button{
+                flex-shrink: 0;
+                flex-basis: 100px;
+                background-color: #ee2e31; 
+                text-decoration: none;
+                text-align: center;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                margin-top: 1vw;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+
+            button:hover{
+                background-color: #db2a2d;
+            }
+
+            button:active{
+                background-color: #88191b;
+            }
+
+            .alive{
+                width: var(--cellSize);
+                height: var(--cellSize);
+                background-color: #1d7874
+            }
+
+            .alive:hover{
+                background-color: #104441;
+                box-shadow: 
+                    inset -2px -2px white,
+                    inset 2px 2px white ;
+            }
+
+            .alive:active{
+                background-color: #071e22;
+            }
+            
+            .unalive{
+                width: var(--cellSize);
+                height: var(--cellSize);
+                background-color: white;
+            }
+
+
+            .unalive:hover{
+                background-color: gray;
+                box-shadow: 
+                    inset -2px -2px black,
+                    inset 2px 2px black;
+            }
+
+            .unalive:active{
+                background-color: #1f1f1f;
+
+            }
+
+            @media screen and (max-width:768px) {
+                :root{
+                --cellSize: 3vmin;
+
+                }
+                body{
+                    margin: 0;
+                    padding: 0;
+                }
+                table {
+                    margin: 0;
+                    width: 100vmin;
+                    border: 4px ;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Conway's Game of Life</h1>
+        <h2>Irving Fenochio</h2>
+        <p>Check out my website 
+            <a href="index.html">here!</a>
+        </p>
+
+        <table id="gameBoard"></table>
+
+        <button id="step">Step</button>
+        <button id="go">Go</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="random">Random</button>
+        <button id="clear">Clear</button>
+        
+        <script src="conway.js"></script>
+        <script>
+            // Executing Code
+            let gameBoard = defaultBoard();
+            let goInterval; 
+            drawBoard(gameBoard);
+
+            document.getElementById("step").addEventListener("click", stepClick)
+
+            document.getElementById("go").addEventListener("click", goClick)
+
+            document.getElementById("pause").addEventListener("click", pauseClick)
+
+            document.getElementById("reset").addEventListener("click", resetClick)
+
+            document.getElementById("random").addEventListener("click", randomClick)
+
+            document.getElementById("clear").addEventListener("click", clearBoardClick)
+        </script>
+
+    </body>
+</html>

@@ -400,19 +400,19 @@ p{
   /*! bottom: -14em; */
   left: 0;
   width: 100%;
-  padding: 4em 1em 2em 1em;
+  padding: 1em 1em 2em 1em;
   text-align: center;
 }
 
 .caption h1{
   font-size: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75em;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5em;
   color: #fff;
 }
 
 .caption h2{
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 1em;
 }
 
