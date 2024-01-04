@@ -363,6 +363,19 @@ p{
     align-items: center; 
   }
 }
+
+#Projects{
+  margin-top: 3rem;
+  padding: 5rem 0;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0), #111, #000, #111, rgba(0,0,0,0));
+  
+}
+
+
+
 /* Image Carousels */
 
 .carousel{
@@ -390,12 +403,7 @@ p{
   width: 100%;
   display: block;
 }
-/* .carousel .images img{
-  background-image: url(images/img1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-} */
+
 
 .carousel * {
   box-sizing: border-box;
@@ -405,6 +413,12 @@ p{
   .carousel{
     width: 80vmax;
   }
+
+/*   #Projects{
+    margin-top: 6rem;
+    padding-top: 6rem;
+    
+  } */
 
 }
 
