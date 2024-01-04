@@ -22,6 +22,7 @@
     <!-- Carousel JS -->
      <!-- <script defer src="carousel.js"></script> -->
      <script defer src="js/slider.js"></script>
+     <script defer src="js/email.js"></script>
 
 
     <title>Irving Fenochio</title>
@@ -66,14 +67,15 @@
                         <p>Download Resume</p>
                     </button>
                 </form>
-                <button onclick="sendMail(); return false">
+                <button id="sendMailButton">
                     <i class="ri-mail-send-line"></i>
                     <p>Contact Me</p>
                 </button>
             </div>
 
             <!-- FormSpree -->
-            <div class="emailBox">
+            <div class="emailBox" id="emailBox">
+                <span class="closeBtn" onclick="closeEmailBox()"><i class="ri-close-line"></i></span>
                 <form action="https://formspree.io/f/xleqewvj" method="post">
                     <h1>Contact Me</h1>
                     <fieldset id="fs-frm-inputs">

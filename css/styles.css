@@ -466,8 +466,12 @@ p{
 /* Email Box */
 
 .emailBox {
-  position: absolute;
-  top: 7em;
+  display: none;
+  position: fixed;
+  align-items: center;
+  top: 50%; /* Position the top edge at 50% of the viewport */
+  left: 50%; /* Position the left edge at 50% of the viewport */
+  transform: translate(-50%, -50%); /* Move the element back by half of its own width and height */
   z-index: 1001;
   background-color: #211d21;
   border-radius: 20px;
@@ -506,7 +510,6 @@ p{
 } */
 
 #submit{
-  display: flex;
   color: #f3f8f3;
   margin: 10px;
   padding: 7px 15px;
@@ -521,4 +524,18 @@ p{
 /*   border: 4px solid rgba(255, 255, 255, 0.5); */
   border-radius: 30px;
   transition: all 0.3s ease;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  font-size: 2em;
+  color: #fff;
+  /* Additional styles for the close button */
+}
+.ri-close-line{
+  color: white;
+  margin: 5px;
 }
