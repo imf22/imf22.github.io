@@ -255,13 +255,14 @@ p{
   
 }
 
-.interactions-buttons button{
+.interactions-buttons button, .form button{
   display: flex;
   margin: 10px;
   padding: 7px 15px;
   align-items: center;
   justify-content: center;
   font-size: x-large; 
+  cursor: pointer;
   /* font-size controls icon size */
 
   background-image: linear-gradient(to bottom right, #76dce8,  #aa9ff1);
@@ -281,7 +282,7 @@ p{
   round buttons, center text
   square button, left text */
 
-.interactions-buttons button p{
+.interactions-buttons button p, .form p{
   display: flex;
   width: min-content;;
   text-align: left;
@@ -312,17 +313,30 @@ p{
   justify-content: center;
   align-items: center;
   margin: 5px;  
-  font-size: 10vmin;
+  font-size: 3rem;
+}
+
+.socials-icons a{
+  text-decoration: none;
 }
 
 .ri-github-fill{
   color: white;
   margin: 5px;
+  transition: all 0.3s ease;
+}
+.ri-github-fill:hover{
+  color: gray;
 }
 
 .ri-linkedin-box-fill{
   color: white;
   margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.ri-linkedin-box-fill:hover{
+  color: gray;
 }
 
 .ri-more-fill{
@@ -349,6 +363,19 @@ p{
     align-items: center; 
   }
 }
+
+#Projects{
+  margin-top: 3rem;
+  padding: 5rem 0;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0), #111, #000, #111, rgba(0,0,0,0));
+  
+}
+
+
+
 /* Image Carousels */
 
 .carousel{
@@ -376,12 +403,7 @@ p{
   width: 100%;
   display: block;
 }
-/* .carousel .images img{
-  background-image: url(images/img1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-} */
+
 
 .carousel * {
   box-sizing: border-box;
@@ -391,6 +413,12 @@ p{
   .carousel{
     width: 80vmax;
   }
+
+/*   #Projects{
+    margin-top: 6rem;
+    padding-top: 6rem;
+    
+  } */
 
 }
 
@@ -461,4 +489,89 @@ p{
 @keyframes imgFade{
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+/* Email Box */
+
+.emailBox {
+  display: none;
+  position: fixed;
+  align-items: center;
+  top: 50%; /* Position the top edge at 50% of the viewport */
+  left: 50%; /* Position the left edge at 50% of the viewport */
+  transform: translate(-50%, -50%); /* Move the element back by half of its own width and height */
+  z-index: 1001;
+  background-color: #211d21;
+  border-radius: 20px;
+  padding: 3em 2em 2em;
+}
+
+.emailBox *{
+  display: flex;
+  flex-direction: column;
+  margin: 0.35em 0.5em;
+  border: none;
+}
+
+.emailBox h1{
+  margin: 0.5ch;
+}
+
+.emailBox input, .emailBox textarea{
+  border-radius: 3em;
+  padding: 1.5em;
+  background-color: transparent;
+  border: 1px solid #76dce8;
+  color: #8a8a8a;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* #submit{
+  padding: 0.5em;
+  background-color: #76dce8;
+  color: #f3f8f3;
+  color: #211d21;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: larger
+} */
+
+#submit{
+  color: #f3f8f3;
+  margin: 10px;
+  padding: 7px 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large; 
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: larger;
+  cursor: pointer;
+
+  background-image: linear-gradient(to bottom right, #76dce8,  #aa9ff1);
+  border: 4px solid transparent;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+#submit:hover{
+  border: 4px solid white;
+  box-shadow: 0px 0px 6px white ;
+  transition: all 0.5s ease;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  font-size: 2em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ri-close-line{
+  color: white;
+  margin: 5px;
 }

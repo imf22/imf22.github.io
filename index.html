@@ -22,6 +22,7 @@
     <!-- Carousel JS -->
      <!-- <script defer src="carousel.js"></script> -->
      <script defer src="js/slider.js"></script>
+     <script defer src="js/email.js"></script>
 
 
     <title>Irving Fenochio</title>
@@ -40,7 +41,7 @@
         </a>
         <nav>
             <a href="#">About Me</a>
-            <a href="#">Projects</a>
+            <a href="#Projects">Projects</a>
         </nav>
     </header>
 
@@ -60,23 +61,46 @@
             </div>
             
             <div class="interactions-buttons">
-                <button>
-                    <i class="ri-download-line"></i>
-                    <p>Download Resume</p>
-                </button>
-                <button>
+                <form method="get" action="_IrvingFenochio_Resume.pdf">                    
+                    <button type="submit">
+                        <i class="ri-download-line"></i>
+                        <p>Download Resume</p>
+                    </button>
+                </form>
+                <button id="sendMailButton">
                     <i class="ri-mail-send-line"></i>
                     <p>Contact Me</p>
                 </button>
             </div>
+
+            <!-- FormSpree -->
+            <div class="emailBox" id="emailBox">
+                <span class="closeBtn" onclick="closeEmailBox()"><i class="ri-close-line"></i></span>
+                <form action="https://formspree.io/f/xleqewvj" method="post">
+                    <h1>Contact Me</h1>
+                    <fieldset id="fs-frm-inputs">
+                        <input type="text" name="name" id="full-name" placeholder="Name" required="">
+                        <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                        <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <input id=submit type="submit" value="Submit">
+                  </form>
+            </div>
     
             <div class="socials-icons">
-                <i class="ri-github-fill"></i>
-                <i class="ri-linkedin-box-fill"></i>
-    
+                <a href="https://github.com/imf22">
+                    <i class="ri-github-fill"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/irving-fenochio">
+                    <i class="ri-linkedin-box-fill"></i>
+                </a>
             </div>
+
         </div>
     </div>
+
+    <h1 id="Projects">Projects</h1>
 
     <div>
         <!-- Sprouting Spirit -->
@@ -96,7 +120,7 @@
                 <img src="images/img4.png" alt="Image 4">
                 <img src="images/img5.png" alt="Image 5">
                 <img src="images/img6.png" alt="Image 6">
-                <img src="images/img9.png" alt="Image 9">
+                <img src="images/img9.jpg" alt="Image 9">
                 <img src="images/img8.png" alt="Image 8">
 
             </div>
