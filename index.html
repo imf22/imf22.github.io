@@ -60,21 +60,37 @@
             </div>
             
             <div class="interactions-buttons">
-                <button>
-                    <i class="ri-download-line"></i>
-                    <p>Download Resume</p>
-                </button>
-                <button>
+                <form method="get" action="_IrvingFenochio_Resume.pdf">                    
+                    <button type="submit">
+                        <i class="ri-download-line"></i>
+                        <p>Download Resume</p>
+                    </button>
+                </form>
+                <button onclick="sendMail(); return false">
                     <i class="ri-mail-send-line"></i>
                     <p>Contact Me</p>
                 </button>
             </div>
+
+            <!-- FormSpree -->
+            <div class="emailBox">
+                <form action="https://formspree.io/f/xleqewvj" method="post">
+                    <h1>Contact Me</h1>
+                    <fieldset id="fs-frm-inputs">
+                        <input type="text" name="name" id="full-name" placeholder="Name" required="">
+                        <input type="email" name="_replyto" id="email-address" placeholder="Email" required="">
+                        <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </fieldset>
+                    <input id=submit type="submit" value="Submit">
+                  </form>
+            </div>
     
             <div class="socials-icons">
-                <i class="ri-github-fill"></i>
-                <i class="ri-linkedin-box-fill"></i>
-    
+                <i class="ri-github-fill"><a href="https://github.com/imf22"></a></i>
+                <i class="ri-linkedin-box-fill"><a href="www.linkedin.com/in/irving-fenochio"></a></i>
             </div>
+
         </div>
     </div>
 

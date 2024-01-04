@@ -255,7 +255,7 @@ p{
   
 }
 
-.interactions-buttons button{
+.interactions-buttons button, .form button{
   display: flex;
   margin: 10px;
   padding: 7px 15px;
@@ -281,7 +281,7 @@ p{
   round buttons, center text
   square button, left text */
 
-.interactions-buttons button p{
+.interactions-buttons button p, .form p{
   display: flex;
   width: min-content;;
   text-align: left;
@@ -461,4 +461,64 @@ p{
 @keyframes imgFade{
   0% {opacity: 0;}
   100% {opacity: 1;}
+}
+
+/* Email Box */
+
+.emailBox {
+  position: absolute;
+  top: 7em;
+  z-index: 1001;
+  background-color: #211d21;
+  border-radius: 20px;
+  padding: 3em 2em 2em;
+}
+
+.emailBox *{
+  display: flex;
+  flex-direction: column;
+  margin: 0.35em 0.5em;
+  border: none;
+}
+
+.emailBox h1{
+  margin: 0.5ch;
+}
+
+.emailBox input, .emailBox textarea{
+  border-radius: 3em;
+  padding: 1.5em;
+  background-color: transparent;
+  border: 1px solid #76dce8;
+  color: #8a8a8a;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+/* #submit{
+  padding: 0.5em;
+  background-color: #76dce8;
+  color: #f3f8f3;
+  color: #211d21;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: larger
+} */
+
+#submit{
+  display: flex;
+  color: #f3f8f3;
+  margin: 10px;
+  padding: 7px 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large; 
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: larger;
+
+  background-image: linear-gradient(to bottom right, #76dce8,  #aa9ff1);
+/*   border: 4px solid rgba(255, 255, 255, 0.5); */
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
