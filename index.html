@@ -2,7 +2,6 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <link rel="icon" type="image/png" href="favicon.png">
 
@@ -213,9 +212,16 @@
     </div>
 
     <script>
-        $(window).on("load",function(){
-            $(".loader-wrapper").fadeOut("slow");
+        window.addEventListener("load", function () {
+            var loaderWrapper = document.querySelector(".loader-wrapper");
+            loaderWrapper.style.transition = "opacity 0.5s ease"; 
+            loaderWrapper.style.opacity = "0";
+            
+            setTimeout(function () {
+                loaderWrapper.style.display = "none";
+            }, 500); 
         });
     </script>
+    
 </body>
 </html>
