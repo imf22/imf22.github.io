@@ -17,7 +17,7 @@ font-family: 'Oswald', sans-serif;      Regular, 400 Medium 500, Bold 700*/
 .loader-wrapper{
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: #242f3f;
