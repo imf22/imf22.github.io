@@ -69,6 +69,29 @@ window.onload = function init() {
     // addArmKeystrokeListener()
 };
 
+async function setUpCanvas() {
+    // Previous code
+    canvas = document.getElementById("gl-canvas");
+
+    gl = canvas.getContext('webgl2');
+
+    if (!gl) alert("WebGL 2.0 isn't available");
+
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.clearColor(1.0, 1.0, 1.0, 1.0);
+    gl.enable(gl.DEPTH_TEST);
+
+    // Modified loading of shaderfiles
+    try {
+        prog1 = await initShaders(gl, "webglproject/shader_v_phong_orig.glsl", "webglproject/shader_f_phong_orig.glsl");
+        // prog1 = await initShaders(gl, vphongURL, fphongURL);
+        // ... continue with the rest of your WebGL setup now that shaders are ready...
+        setupAfterCanvasReady();
+    } catch (err) {
+        console.error(`Error initializing shaders: ${err.message}`);
+    }
+}
+
 function setupAfterCanvasReady(){
     material0 = new Material(
         vec3(0.8, 0.8, 0.8),
@@ -86,7 +109,7 @@ function setupAfterCanvasReady(){
 
     cam = new Camera()
 
-    // setupRobotComponents(); Move to wait for prog
+    setupRobotComponents();
 
     cam.setLookAt(base.shape);
     drawAllShapes();
@@ -164,28 +187,7 @@ function readInSMFFile(fname) {
 // let fphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_f_phong_orig.glsl";
 // let vphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_v_phong_orig.glsl";
 
-async function setUpCanvas() {
-    // Previous code
-    canvas = document.getElementById("gl-canvas");
 
-    gl = canvas.getContext('webgl2');
-
-    if (!gl) alert("WebGL 2.0 isn't available");
-
-    gl.viewport(0, 0, canvas.width, canvas.height);
-    gl.clearColor(1.0, 1.0, 1.0, 1.0);
-    gl.enable(gl.DEPTH_TEST);
-
-    // Modified loading of shaderfiles
-    try {
-        prog1 = await initShaders(gl, "webglproject/shader_v_phong_orig.glsl", "webglproject/shader_f_phong_orig.glsl");
-        // prog1 = await initShaders(gl, vphongURL, fphongURL);
-        // ... continue with the rest of your WebGL setup now that shaders are ready...
-        setupAfterCanvasReady();
-    } catch (err) {
-        console.error(`Error initializing shaders: ${err.message}`);
-    }
-}
     
 
 
