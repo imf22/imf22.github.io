@@ -44,6 +44,32 @@ var base, a0T, a1T, a2T, a3T, floorT;
 window.onload = function init() {
     setUpCanvas();
 
+    // material0 = new Material(
+    //     vec3(0.8, 0.8, 0.8),
+    //     vec3(0.5, 0.45, 0.75),
+    //     vec3(0.4, 0.5, 0.7),
+    //     10.0);
+    
+    // mat_ground = new Material(
+    //     vec3(0.8, 0.5, 0.5),
+    //     vec3(0.5, 0.45, 0.75),
+    //     vec3(0.1, 0.1, 0.7),
+    //     10.0);
+
+    // currentMat = material0;
+
+    // cam = new Camera()
+
+    // // setupRobotComponents(); Move to wait for prog
+
+    // cam.setLookAt(base.shape);
+    // drawAllShapes();
+
+    // addArmMenuListener()
+    // addArmKeystrokeListener()
+};
+
+function setupAfterCanvasReady(){
     material0 = new Material(
         vec3(0.8, 0.8, 0.8),
         vec3(0.5, 0.45, 0.75),
@@ -60,19 +86,14 @@ window.onload = function init() {
 
     cam = new Camera()
 
-    setupRobotComponents();
-    // allParts = [smfShape1]
-    // allParts = [smfShape1, smfShape2]
-
-
+    // setupRobotComponents(); Move to wait for prog
 
     cam.setLookAt(base.shape);
     drawAllShapes();
 
     addArmMenuListener()
     addArmKeystrokeListener()
-
-};
+}
 
 
 
@@ -154,6 +175,7 @@ async function setUpCanvas() {
     try {
         prog1 = await initShaders(gl, "webglproject/_v_phong_orig.glsl", "webglproject/_f_phong_orig.glsl");
         // ... continue with the rest of your WebGL setup now that shaders are ready...
+        setupAfterCanvasReady();
     } catch (err) {
         console.error(`Error initializing shaders: ${err.message}`);
     }
