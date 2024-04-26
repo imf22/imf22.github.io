@@ -161,8 +161,8 @@ function readInSMFFile(fname) {
 
 // https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_f_phong_orig.glsl
 // https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_v_phong_orig.glsl
-let fphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_f_phong_orig.glsl";
-let vphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_v_phong_orig.glsl";
+// let fphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_f_phong_orig.glsl";
+// let vphongURL = "https://github.com/imf22/imf22.github.io/blob/522ad72792a39cf89e3a2e8cc66ff959e19bcd9f/webglproject/_v_phong_orig.glsl";
 
 async function setUpCanvas() {
     // Previous code
@@ -178,8 +178,8 @@ async function setUpCanvas() {
 
     // Modified loading of shaderfiles
     try {
-        // prog1 = await initShaders(gl, "webglproject/_v_phong_orig.glsl", "webglproject/_f_phong_orig.glsl");
-        prog1 = await initShaders(gl, vphongURL, fphongURL);
+        prog1 = await initShaders(gl, "webglproject/shader_v_phong_orig.glsl", "webglproject/shader_f_phong_orig.glsl");
+        // prog1 = await initShaders(gl, vphongURL, fphongURL);
         // ... continue with the rest of your WebGL setup now that shaders are ready...
         setupAfterCanvasReady();
     } catch (err) {
