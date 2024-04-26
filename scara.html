@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+
+    <script src="https://greggman.github.io/webgl-lint/webgl-lint.js" crossorigin></script>
+    <script type="text/javascript" src="./webglproject/Common/initShaders2.js"></script>
+    <script type="text/javascript" src="./webglproject/Common/MVnew.js"></script>
+    <script type="text/javascript" src="./webglproject/shape3D.js"></script>
+    <script type="text/javascript" src="./webglproject/camera.js"></script>
+    <script type="text/javascript" src="./webglproject/material.js"></script>
+    <script type="text/javascript" src="./webglproject/pointLight.js"></script>
+    <script type="text/javascript" src="./webglproject/index.js"></script>
+    <script type="text/javascript" src="./webglproject/app.js"></script>
+
+    <style>
+        * {
+            background-color: slategray;
+        }
+        div {
+            margin: 0 auto;
+            text-align: center;
+            margin: 0;
+        }
+
+        h3 {
+            margin-bottom: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .slidecontainer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .controls {
+            /*         padding-top: 1rem; */
+            width: max-content;
+        }
+
+        .controls h3 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .controls p {
+            padding-top: 0;
+            margin-top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            
+            <canvas id="gl-canvas" width="512" height="512">
+                Oops ... your browser doesn't support the HTML5 canvas element
+            </canvas>
+            
+            <div>
+                <button id="projection">
+                    Toggle Perspective/Ortho
+                </button>
+                
+            </div>
+            <p id="currentText">Controlling Arm 1</p>
+            <div>
+                <div class="slidecontainer">
+                    <input type="range" min="-360" max="360" value="0" class="slider" id="sliderArm1">
+                    <input type="range" min="-163" max="163" value="0" class="slider" id="sliderArm2">
+                    <input type="range" min="-180" max="180" value="0" class="slider" id="sliderArm3">
+                </div>
+            </div>
+
+        </div>
+        <div class="controls">
+            <h3>Camera Controls</h3>
+            <p>
+                W : Zoom In <br>
+                S : Zoom Out <br>
+                Q : Increase Height <br>
+                E : Decrease Height <br>
+                A : Rotate Left <br>
+                D : Rotate Right <br>
+            </p>
+            <h3>Arm Controls:</h3>
+            <p>
+                J: Arm Increase <br>
+                K: Arm Decrease <br>
+                U: Prev Arm <br>
+                I: Next Arm <br>
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
