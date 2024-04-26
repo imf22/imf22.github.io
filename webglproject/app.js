@@ -123,7 +123,23 @@ function readInSMFFile(fname) {
     return smfShape
 }
 
-function setUpCanvas() {
+// function setUpCanvas() {
+//     canvas = document.getElementById("gl-canvas");
+
+//     gl = canvas.getContext('webgl2');
+
+//     if (!gl) alert("WebGL 2.0 isn't available");
+
+//     gl.viewport(0, 0, canvas.width, canvas.height);
+//     gl.clearColor(1.0, 1.0, 1.0, 1.0);
+//     gl.enable(gl.DEPTH_TEST);
+
+//     // Initialize flat phong shaders
+//     prog1 = initShaders(gl, "./_v_phong_orig.glsl", "./_f_phong_orig.glsl");
+// }
+
+async function setUpCanvas() {
+    // Previous code
     canvas = document.getElementById("gl-canvas");
 
     gl = canvas.getContext('webgl2');
@@ -134,9 +150,16 @@ function setUpCanvas() {
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
     gl.enable(gl.DEPTH_TEST);
 
-    // Initialize flat phong shaders
-    prog1 = initShaders(gl, "./_v_phong_orig.glsl", "./_f_phong_orig.glsl");
+    // Modified loading of shaderfiles
+    try {
+        prog1 = await initShaders(gl, "webglproject/_v_phong_orig.glsl", "webglproject/_f_phong_orig.glsl");
+        // ... continue with the rest of your WebGL setup now that shaders are ready...
+    } catch (err) {
+        console.error(`Error initializing shaders: ${err.message}`);
+    }
 }
+    
+
 
 function initialize(shape) {
     // move stuff from shape3d initialize to here
