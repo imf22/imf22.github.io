@@ -2,6 +2,7 @@ async function loadShaderFile(url) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
+            console.log(response);
             throw new Error(`Failed to load shader file: ${url}`);
         }
         return response.text();
